@@ -1,11 +1,10 @@
-# Microservice desenvolvido para simular o app Metup de forma simplificada - BOOTCAMP JAVA
+# Bootcamp Java Womakerscode 2022
 
-
-## O que é o projeto?
+## 🤔 O que é o projeto?
 
 Consiste num pequeno microservice que irá ter lado de client e server no momento de se cadastrar num meetup.
 
-## Tecnologias utilizadas
+## 💻 Tecnologias utilizadas
 
 - Java 11
 - Gradle
@@ -14,7 +13,7 @@ Consiste num pequeno microservice que irá ter lado de client e server no moment
 - TDD Test Driven Development
 - Azure functions
 
-## TODO list
+## 👩‍💻 TODO list
 - [ ] Implementação da classe se servico
 - [ ] Testes no service
 - [ ] Implementação da classe de controlle da web
