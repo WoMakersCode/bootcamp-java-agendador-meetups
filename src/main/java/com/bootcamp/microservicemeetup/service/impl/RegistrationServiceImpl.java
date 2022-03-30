@@ -34,6 +34,8 @@ public class RegistrationServiceImpl implements RegistrationService {
         return this.repository.findById(id);
     }
 
+
+    // inserir mais uma validacao no delete();
     @Override
     public void delete(Registration registration) {
         if (registration == null || registration.getId() == null) {
@@ -42,6 +44,7 @@ public class RegistrationServiceImpl implements RegistrationService {
         this.repository.delete(registration);
     }
 
+    // inserir mais uma validacao no save();
     @Override
     public Registration update(Registration registration) {
         if (registration == null || registration.getId() == null) {

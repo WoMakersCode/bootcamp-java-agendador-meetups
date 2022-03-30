@@ -191,7 +191,6 @@ public class RegistrationServiceTest {
     }
 
 
-
     private Registration createValidRegistration() {
         return Registration.builder()
                 .id(101)
