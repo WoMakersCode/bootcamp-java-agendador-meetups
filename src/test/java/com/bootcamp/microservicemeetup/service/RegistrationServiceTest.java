@@ -123,7 +123,7 @@ public class RegistrationServiceTest {
     }
 
     @Test
-    @DisplayName("Shoud update an registration")
+    @DisplayName("Should update an registration")
     public void updateRegistration() {
 
         // cenario
