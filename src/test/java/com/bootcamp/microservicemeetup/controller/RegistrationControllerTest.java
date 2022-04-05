@@ -1,5 +1,6 @@
 package com.bootcamp.microservicemeetup.controller;
 
+import com.bootcamp.microservicemeetup.exception.BusinessException;
 import com.bootcamp.microservicemeetup.model.RegistrationDTO;
 import com.bootcamp.microservicemeetup.model.entity.Registration;
 import com.bootcamp.microservicemeetup.service.RegistrationService;
@@ -49,7 +50,7 @@ public class RegistrationControllerTest {
     RegistrationService registrationService;
 
     @Test
-    @DisplayName("Should creare a registration with success")
+    @DisplayName("Should create a registration with success")
     public void createRegistrationTest() throws Exception {
 
         // cenario
@@ -79,6 +80,74 @@ public class RegistrationControllerTest {
                 .andExpect(jsonPath("name").value(registrationDTOBuilder.getName()))
                 .andExpect(jsonPath("dateOfRegistration").value(registrationDTOBuilder.getDateOfRegistration()))
                 .andExpect(jsonPath("registration").value(registrationDTOBuilder.getRegistration()));
+    }
+
+    @Test
+    @DisplayName("Should throw an exception when not have date enough for the test.")
+    public void createInvalidStudentTest() throws Exception {
+
+        String json  = new ObjectMapper().writeValueAsString(new RegistrationDTO());
+
+        MockHttpServletRequestBuilder request  = MockMvcRequestBuilders
+                .post(REGISTRATION_API)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(json);
+
+
+        mockMvc.perform(request)
+                .andExpect(status().isBadRequest());
+
+    }
+
+    @Test
+    @DisplayName("Should throw an exception when try to create a new registration with an registration already created.")
+    public void createStudentWithDuplicatedRegistration() throws Exception {
+
+        RegistrationDTO dto = createNewRegistration();
+        String json  = new ObjectMapper().writeValueAsString(dto);
+
+        BDDMockito.given(registrationService.save(any(Registration.class)))
+                .willThrow(new BusinessException("Registration already created!"));
+
+        MockHttpServletRequestBuilder request  = MockMvcRequestBuilders
+                .post(REGISTRATION_API)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(json);
+
+        mockMvc.perform(request)
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("errors", hasSize(1)))
+                .andExpect(jsonPath("errors[0]").value("Registration already created!"));
+    }
+
+    @Test
+    @DisplayName("Should get registration informations")
+    public void getStudentTest() throws Exception {
+
+        Integer id = 11;
+
+        Registration student = Registration.builder()
+                .id(id)
+                .name(createNewRegistration().getName())
+                .dateOfRegistration(createNewRegistration().getDateOfRegistration())
+                .registration(createNewRegistration().getRegistration()).build();
+
+        BDDMockito.given(registrationService.getRegistrationById(id)).willReturn(Optional.of(student));
+
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get(REGISTRATION_API.concat("/" + id))
+                .accept(MediaType.APPLICATION_JSON);
+
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("id").value(id))
+                .andExpect(jsonPath("name").value(createNewRegistration().getName()))
+                .andExpect(jsonPath("dateOfRegistration").value(createNewRegistration().getDateOfRegistration()))
+                .andExpect(jsonPath("registration").value(createNewRegistration().getRegistration()));
+
+
     }
 
 
