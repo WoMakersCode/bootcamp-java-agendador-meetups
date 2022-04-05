@@ -39,7 +39,7 @@ https://github.com/aevilesaguiar/starWars.git
 https://github.com/aevilesaguiar/Servico-de-agendamento-de-meetup
 
 
-- **Bruna Colin Baldin** 
+- **[Bruna Colin Baldin e Silva](https://www.linkedin.com/in/bruna-colin-33955221a/)** 
 
 https://github.com/colinbruna/womakerscode-starwars-rest-api
 
