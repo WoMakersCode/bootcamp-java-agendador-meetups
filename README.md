@@ -58,6 +58,10 @@ https://github.com/ThamyrisGT/Bootcamp-Java-Agendador-Meetups
 https://github.com/mariliamessias/womakerscode-rest-api
 
 
+- **[Bruna Delmouro da Silva](https://www.linkedin.com/in/bruna-delmouro/)**
+
+https://github.com/brunadelmourosilva/womakerscode-microservice-meetup
+
 
 
 
