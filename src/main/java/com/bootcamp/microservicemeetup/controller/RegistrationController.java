@@ -72,4 +72,6 @@ public class RegistrationController {
         }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 
     }
+
+    // implementacao do metodo find
 }
