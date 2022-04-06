@@ -73,5 +73,16 @@ public class RegistrationController {
 
     }
 
-    // implementacao do metodo find
+    @GetMapping
+    public Page<RegistrationDTO> find(RegistrationDTO dto, Pageable pageRequest) {
+        Registration filter = modelMapper.map(dto, Registration.class);
+        Page<Registration> result = registrationService.find(filter, pageRequest);
+
+        List<RegistrationDTO> list = result.getContent()
+                .stream()
+                .map(entity -> modelMapper.map(entity, RegistrationDTO.class))
+                .collect(Collectors.toList());
+
+        return new PageImpl<RegistrationDTO>(list, pageRequest, result.getTotalElements());
+    }
 }
