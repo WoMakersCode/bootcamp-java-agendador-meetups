@@ -58,7 +58,11 @@ https://github.com/ThamyrisGT/Bootcamp-Java-Agendador-Meetups
 https://github.com/mariliamessias/womakerscode-rest-api
 
 
+- **[Michely Prudêncio Souza](https://www.linkedin.com/in/michely-prudencio-souza/)**
 
+https://github.com/michelypsouza/bootcamp-java-starwars-restapi
+
+https://github.com/michelypsouza/Servico-de-agendamento-de-meetups
 
 
 
