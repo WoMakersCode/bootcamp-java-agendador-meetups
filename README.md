@@ -58,6 +58,11 @@ https://github.com/ThamyrisGT/Bootcamp-Java-Agendador-Meetups
 https://github.com/mariliamessias/womakerscode-rest-api
 
 
+- **[Valéria Garcia](https://www.linkedin.com/in/valeriabeserragarcia/)**
+
+https://github.com/valeriabgarcia/WomakersCode-BootcampJava-API-Meetup
+
+
 
 
 
