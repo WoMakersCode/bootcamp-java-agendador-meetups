@@ -57,6 +57,11 @@ https://github.com/ThamyrisGT/Bootcamp-Java-Agendador-Meetups
 
 https://github.com/mariliamessias/womakerscode-rest-api
 
+- **[Letícia Ferreira Lima](https://www.linkedin.com/in/leticia-flima/)**
+
+https://github.com/Letiiciia/bootcamp-java-agendador-meetups
+https://github.com/Letiiciia/meetupsApi-WomakersCode
+
 
 
 
