@@ -26,7 +26,7 @@ Consiste num pequeno microservice que irá ter lado de client e server no moment
 
 ## 🦋 Projeto das alunas - confira o aprendizado delas 
 
-- **[Ana Carolina Braga](https://www.linkedin.com/in/anacarolina-braga/)
+- **[Ana Carolina Braga](https://www.linkedin.com/in/anacarolina-braga/)**
 
 https://github.com/AnaCarolinaBraga/bootcamp-java-RestAPI-Star-Wars
 
