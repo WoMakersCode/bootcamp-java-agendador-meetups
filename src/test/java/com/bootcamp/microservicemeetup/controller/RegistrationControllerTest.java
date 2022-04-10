@@ -55,7 +55,7 @@ public class RegistrationControllerTest {
 
         // cenario
         RegistrationDTO registrationDTOBuilder = createNewRegistration();
-        Registration savedRegistration  = Registration.builder().id(101)
+        Registration savedRegistration = Registration.builder().id(101)
                 .name("Ana Neri").dateOfRegistration("10/10/2021").registration("001").build();
 
 

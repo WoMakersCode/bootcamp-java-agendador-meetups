@@ -11,7 +11,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.BDDMockito;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -24,7 +23,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.testcontainers.shaded.com.fasterxml.jackson.databind.ObjectMapper;
-import org.testcontainers.shaded.org.hamcrest.Matchers;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -52,7 +50,7 @@ public class MeetupControllerTest {
     public void createMeetupTest() throws Exception {
 
         // quando enviar uma requisicao pra esse registration precisa ser encontrado um valor que tem esse usuario
-        MeetupDTO dto = MeetupDTO.builder().registration("123").event("Womakerscode Dados").build();
+        MeetupDTO dto = MeetupDTO.builder().registrationAttribute("123").event("Womakerscode Dados").build();
         String json = new ObjectMapper().writeValueAsString(dto);
 
         Registration registration = Registration.builder().id(11).registration("123").build();
@@ -81,7 +79,7 @@ public class MeetupControllerTest {
     @DisplayName("Should return error when try to register an a meetup nonexistent")
     public void invalidRegistrationCreateMeetupTest() throws Exception {
 
-        MeetupDTO dto = MeetupDTO.builder().registration("123").event("Womakerscode Dados").build();
+        MeetupDTO dto = MeetupDTO.builder().registrationAttribute("123").event("Womakerscode Dados").build();
         String json = new ObjectMapper().writeValueAsString(dto);
 
         BDDMockito.given(registrationService.getRegistrationByRegistrationAttribute("123")).
@@ -104,7 +102,7 @@ public class MeetupControllerTest {
     @DisplayName("Should return error when try to register a registration already register on a meetup")
     public void  meetupRegistrationErrorOnCreateMeetupTest() throws Exception {
 
-        MeetupDTO dto = MeetupDTO.builder().registration("123").event("Womakerscode Dados").build();
+        MeetupDTO dto = MeetupDTO.builder().registrationAttribute("123").event("Womakerscode Dados").build();
         String json = new ObjectMapper().writeValueAsString(dto);
 
 
@@ -124,6 +122,8 @@ public class MeetupControllerTest {
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isBadRequest());
     }
+
+
 
 
 }

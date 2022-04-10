@@ -7,17 +7,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class MeetupDTO {
+@NoArgsConstructor
+@Builder
+public class MeetupFilterDTO {
 
+    private String registration;
 
-    private Integer id;
-
-    private String registrationAttribute;
-
-    private String event;
-
-    private RegistrationDTO registration;
+    private  String event;
 }
