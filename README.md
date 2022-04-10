@@ -61,6 +61,7 @@ https://github.com/mariliamessias/womakerscode-rest-api
 - **[Vanessa Alexsandra Yoshida de O. Murakami](https://www.linkedin.com/in/vanessayoshida/)**
 
 https://github.com/VanessaYoshida/bootcamp-java-star-wars
+
 https://github.com/VanessaYoshida/servico-agendamento-de-meetups
 
 
