@@ -1,16 +1,13 @@
-package com.bootcamp.microservicemeetup.controller;
+package com.bootcamp.microservicemeetup.controller.resource;
 
-import com.bootcamp.microservicemeetup.model.RegistrationDTO;
+import com.bootcamp.microservicemeetup.controller.dto.RegistrationDTO;
 import com.bootcamp.microservicemeetup.model.entity.Registration;
 import com.bootcamp.microservicemeetup.service.RegistrationService;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 

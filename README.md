@@ -4,6 +4,9 @@
 
 Consiste num pequeno microservice que irá ter lado de client e server no momento de se cadastrar num meetup.
 
+
+https://user-images.githubusercontent.com/42419543/162650128-1f8ab89f-0235-40a4-ad57-e60741ebf2ec.mp4
+
 ## 💻 Tecnologias utilizadas
 
 - Java 11
@@ -16,46 +19,19 @@ Consiste num pequeno microservice que irá ter lado de client e server no moment
 ## 👩‍💻 TODO list
 - [X] Implementação da classe se servico
 - [X] Testes no service
-- [ ] Implementação da classe de controlle da web
-- [ ] Testes de contrato no controller
-- [ ] Testes unitarios no repository
-- [ ] Implementação do repository
-- [ ] Swagger
-- [ ] Testes locais via postman
+- [X] Implementação da classe de controlle da web
+- [X] Testes de contrato no controller
+- [X] Testes unitarios no repository
+- [X] Implementação do repository
+- [X] Swagger
+- [X] Testes locais via postman
 - [ ] Deploy no azure
 
-## 🦋 Projeto das alunas - confira o aprendizado delas 
+## TODO ALUNAS - camada Meetup
 
-- **[Amanda Lima Santos](https://www.linkedin.com/in/amandaveredas/)**
-
-https://github.com/amandaveredas/jedis-api
-
-https://github.com/amandaveredas/meetups-api
-
-- **[Aeviles Aguiar](https://www.linkedin.com/in/aeviles-aguiar-silva/)**  
-
-https://github.com/aevilesaguiar/starWars.git
-
-https://github.com/aevilesaguiar/Servico-de-agendamento-de-meetup
-
-
-- **Bruna Colin Baldin** 
-
-https://github.com/colinbruna/womakerscode-starwars-rest-api
-
-https://github.com/colinbruna/servico-de-agendamento-de-meetups
-
-
-- **[Thamyris Gama Thurler](https://www.linkedin.com/in/thamyris-gama-thurler-595716127/)**
-
-https://github.com/ThamyrisGT/Bootcamp-Java-StartWars-RESTAPI
-
-https://github.com/ThamyrisGT/Bootcamp-Java-Agendador-Meetups
-
-
-- **[Marilia Aparecida Messias de Oliveira](https://www.linkedin.com/in/mariliamessias/)**
-
-https://github.com/mariliamessias/womakerscode-rest-api
+- [ ] Testes do repository 
+- [ ] Testes do controller
+- [ ] Testes do service
 
 
 - **[Vanessa Alexsandra Yoshida de O. Murakami](https://www.linkedin.com/in/vanessayoshida/)**

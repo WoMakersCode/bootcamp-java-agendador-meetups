@@ -1,4 +1,4 @@
-package com.bootcamp.microservicemeetup.model;
+package com.bootcamp.microservicemeetup.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
-import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
