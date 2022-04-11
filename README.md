@@ -29,19 +29,6 @@ https://user-images.githubusercontent.com/42419543/162650128-1f8ab89f-0235-40a4-
 
 ## TODO ALUNAS - camada Meetup
 
-- [ ] Testes do repository 
+- [ ] Testes do repository
 - [ ] Testes do controller
 - [ ] Testes do service
-
-
-- **[Vanessa Alexsandra Yoshida de O. Murakami](https://www.linkedin.com/in/vanessayoshida/)**
-
-https://github.com/VanessaYoshida/bootcamp-java-star-wars
-
-https://github.com/VanessaYoshida/servico-agendamento-de-meetups
-
-
-
-
-
-
