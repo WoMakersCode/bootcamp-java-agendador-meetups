@@ -1,6 +1,6 @@
-package com.bootcamp.microservicemeetup.controller;
+package com.bootcamp.microservicemeetup.controller.resource;
 
-import com.bootcamp.microservicemeetup.model.RegistrationDTO;
+import com.bootcamp.microservicemeetup.controller.dto.RegistrationDTO;
 import com.bootcamp.microservicemeetup.model.entity.Registration;
 import com.bootcamp.microservicemeetup.service.RegistrationService;
 import org.modelmapper.ModelMapper;

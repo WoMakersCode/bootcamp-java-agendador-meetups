@@ -1,7 +1,8 @@
 package com.bootcamp.microservicemeetup.controller;
 
+import com.bootcamp.microservicemeetup.controller.resource.RegistrationController;
 import com.bootcamp.microservicemeetup.exception.BusinessException;
-import com.bootcamp.microservicemeetup.model.RegistrationDTO;
+import com.bootcamp.microservicemeetup.controller.dto.RegistrationDTO;
 import com.bootcamp.microservicemeetup.model.entity.Registration;
 import com.bootcamp.microservicemeetup.service.RegistrationService;
 import org.hamcrest.Matchers;

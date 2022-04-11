@@ -1,4 +1,4 @@
-package com.bootcamp.microservicemeetup.model;
+package com.bootcamp.microservicemeetup.controller.dto;
 
 
 import lombok.AllArgsConstructor;
