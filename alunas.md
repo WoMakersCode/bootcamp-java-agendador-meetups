@@ -30,3 +30,9 @@ https://github.com/ThamyrisGT/Bootcamp-Java-Agendador-Meetups
 - **[Marilia Aparecida Messias de Oliveira](https://www.linkedin.com/in/mariliamessias/)**
 
 https://github.com/mariliamessias/womakerscode-rest-api
+
+- **[Lívia Pavini Zeviani](https://www.linkedin.com/in/livia-zeviani/)**
+
+https://github.com/liviazeviani/ProjetoTDDStarWars
+
+https://github.com/liviazeviani/MeetUp
