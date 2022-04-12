@@ -30,3 +30,10 @@ https://github.com/ThamyrisGT/Bootcamp-Java-Agendador-Meetups
 - **[Marilia Aparecida Messias de Oliveira](https://www.linkedin.com/in/mariliamessias/)**
 
 https://github.com/mariliamessias/womakerscode-rest-api
+
+
+- **[Mariela Atausinchi Fernandez](https://github.com/hikarym/)**
+
+https://github.com/hikarym/rest-api-startwars
+
+https://github.com/hikarym/Servico-de-agendamento-de-meetups
