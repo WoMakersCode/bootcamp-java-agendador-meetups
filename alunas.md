@@ -27,6 +27,13 @@ https://github.com/ThamyrisGT/Bootcamp-Java-StartWars-RESTAPI
 https://github.com/ThamyrisGT/Bootcamp-Java-Agendador-Meetups
 
 
+- **[Leticia Campos da Silva](https://www.linkedin.com/in/leticiacamposs/)**
+
+https://github.com/leticiacamposs2/bootcampjava-restapi-starwars-tdd
+
+https://github.com/leticiacamposs2/meeting-scheduling-microservice
+
+
 - **[Marilia Aparecida Messias de Oliveira](https://www.linkedin.com/in/mariliamessias/)**
 
 https://github.com/mariliamessias/womakerscode-rest-api
