@@ -20,6 +20,13 @@ https://github.com/colinbruna/womakerscode-starwars-rest-api
 https://github.com/colinbruna/servico-de-agendamento-de-meetups
 
 
+- **[Esther Wyse Lucena](www.linkedin.com/in/esther-wyse-lucena)**
+
+https://github.com/estherwl/Rest-API_Star-Wars
+
+https://github.com/estherwl/agendador-meetups
+
+
 - **[Thamyris Gama Thurler](https://www.linkedin.com/in/thamyris-gama-thurler-595716127/)**
 
 https://github.com/ThamyrisGT/Bootcamp-Java-StartWars-RESTAPI
