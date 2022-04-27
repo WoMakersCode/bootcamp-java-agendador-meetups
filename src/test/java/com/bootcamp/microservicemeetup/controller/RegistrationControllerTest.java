@@ -1,10 +1,12 @@
 package com.bootcamp.microservicemeetup.controller;
 
+import com.bootcamp.microservicemeetup.controller.dto.RegistrationDTO;
 import com.bootcamp.microservicemeetup.controller.resource.RegistrationController;
 import com.bootcamp.microservicemeetup.exception.BusinessException;
-import com.bootcamp.microservicemeetup.controller.dto.RegistrationDTO;
 import com.bootcamp.microservicemeetup.model.entity.Registration;
 import com.bootcamp.microservicemeetup.service.RegistrationService;
+import java.util.Arrays;
+import java.util.Optional;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -24,17 +26,13 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-
 import org.testcontainers.shaded.com.fasterxml.jackson.databind.ObjectMapper;
 
-
-import java.util.Arrays;
-import java.util.Optional;
-
 import static org.hamcrest.Matchers.hasSize;
-import static org.mockito.Mockito.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.anyInt;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
@@ -57,15 +55,14 @@ public class RegistrationControllerTest {
         // cenario
         RegistrationDTO registrationDTOBuilder = createNewRegistration();
         Registration savedRegistration = Registration.builder().id(101)
-                .name("Ana Neri").dateOfRegistration("10/10/2021").registration("001").build();
+                .name("Ana Neri").dateOfRegistration("10/10/2021")
+                .build();
 
 
         // execucao
         BDDMockito.given(registrationService.save(any(Registration.class))).willReturn(savedRegistration);
 
-
-        String json  = new ObjectMapper().writeValueAsString(registrationDTOBuilder);
-
+        String json = new ObjectMapper().writeValueAsString(registrationDTOBuilder);
 
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders
                 .post(REGISTRATION_API)
@@ -79,22 +76,20 @@ public class RegistrationControllerTest {
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("id").value(101))
                 .andExpect(jsonPath("name").value(registrationDTOBuilder.getName()))
-                .andExpect(jsonPath("dateOfRegistration").value(registrationDTOBuilder.getDateOfRegistration()))
-                .andExpect(jsonPath("registration").value(registrationDTOBuilder.getRegistration()));
+                .andExpect(jsonPath("dateOfRegistration").value(registrationDTOBuilder.getDateOfRegistration()));
     }
 
     @Test
     @DisplayName("Should throw an exception when not have date enough for the test.")
     public void createInvalidRegistrationTest() throws Exception {
 
-        String json  = new ObjectMapper().writeValueAsString(new RegistrationDTO());
+        String json = new ObjectMapper().writeValueAsString(new RegistrationDTO());
 
-        MockHttpServletRequestBuilder request  = MockMvcRequestBuilders
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
                 .post(REGISTRATION_API)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
                 .content(json);
-
 
         mockMvc.perform(request)
                 .andExpect(status().isBadRequest());
@@ -106,12 +101,12 @@ public class RegistrationControllerTest {
     public void createRegistrationWithDuplicatedRegistration() throws Exception {
 
         RegistrationDTO dto = createNewRegistration();
-        String json  = new ObjectMapper().writeValueAsString(dto);
+        String json = new ObjectMapper().writeValueAsString(dto);
 
         BDDMockito.given(registrationService.save(any(Registration.class)))
                 .willThrow(new BusinessException("Registration already created!"));
 
-        MockHttpServletRequestBuilder request  = MockMvcRequestBuilders
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
                 .post(REGISTRATION_API)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
@@ -133,7 +128,7 @@ public class RegistrationControllerTest {
                 .id(id)
                 .name(createNewRegistration().getName())
                 .dateOfRegistration(createNewRegistration().getDateOfRegistration())
-                .registration(createNewRegistration().getRegistration()).build();
+                .build();
 
         BDDMockito.given(registrationService.getRegistrationById(id)).willReturn(Optional.of(registration));
 
@@ -145,8 +140,7 @@ public class RegistrationControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("id").value(id))
                 .andExpect(jsonPath("name").value(createNewRegistration().getName()))
-                .andExpect(jsonPath("dateOfRegistration").value(createNewRegistration().getDateOfRegistration()))
-                .andExpect(jsonPath("registration").value(createNewRegistration().getRegistration()));
+                .andExpect(jsonPath("dateOfRegistration").value(createNewRegistration().getDateOfRegistration()));
 
     }
 
@@ -170,7 +164,7 @@ public class RegistrationControllerTest {
     public void deleteRegistration() throws Exception {
 
         BDDMockito.given(registrationService
-                .getRegistrationById(anyInt()))
+                        .getRegistrationById(anyInt()))
                 .willReturn(Optional.of(Registration.builder().id(11).build()));
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
@@ -206,11 +200,10 @@ public class RegistrationControllerTest {
 
         Registration updatingRegistration =
                 Registration.builder()
-                .id(id)
-                .name("Julie Neri")
-                .dateOfRegistration("10/10/2021")
-                .registration("323")
-                .build();
+                        .id(id)
+                        .name("Julie Neri")
+                        .dateOfRegistration("10/10/2021")
+                        .build();
 
         BDDMockito.given(registrationService.getRegistrationById(anyInt()))
                 .willReturn(Optional.of(updatingRegistration));
@@ -220,11 +213,10 @@ public class RegistrationControllerTest {
                         .id(id)
                         .name("Ana Neri")
                         .dateOfRegistration("10/10/2021")
-                        .registration("323")
                         .build();
 
         BDDMockito.given(registrationService
-                .update(updatingRegistration))
+                        .update(updatingRegistration))
                 .willReturn(updatedRegistration);
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
@@ -237,8 +229,7 @@ public class RegistrationControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("id").value(id))
                 .andExpect(jsonPath("name").value(createNewRegistration().getName()))
-                .andExpect(jsonPath("dateOfRegistration").value(createNewRegistration().getDateOfRegistration()))
-                .andExpect(jsonPath("registration").value("323"));
+                .andExpect(jsonPath("dateOfRegistration").value(createNewRegistration().getDateOfRegistration()));
     }
 
     @Test
@@ -269,14 +260,15 @@ public class RegistrationControllerTest {
                 .id(id)
                 .name(createNewRegistration().getName())
                 .dateOfRegistration(createNewRegistration().getDateOfRegistration())
-                .registration(createNewRegistration().getRegistration()).build();
+                .build();
 
-        BDDMockito.given(registrationService.find(Mockito.any(Registration.class), Mockito.any(Pageable.class)) )
-                .willReturn(new PageImpl<Registration>(Arrays.asList(registration), PageRequest.of(0,100), 1));
+        BDDMockito.given(registrationService.find(Mockito.any(Registration.class), Mockito.any(Pageable.class)))
+                .willReturn(new PageImpl<Registration>(Arrays.asList(registration), PageRequest.of(0, 100), 1));
 
 
         String queryString = String.format("?name=%s&dateOfRegistration=%s&page=0&size=100",
-                registration.getRegistration(), registration.getDateOfRegistration());
+                registration.getName(),
+                registration.getDateOfRegistration());
 
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
@@ -287,16 +279,15 @@ public class RegistrationControllerTest {
                 .perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("content", Matchers.hasSize(1)))
-                .andExpect(jsonPath("totalElements"). value(1))
-                .andExpect(jsonPath("pageable.pageSize"). value(100))
-                .andExpect(jsonPath("pageable.pageNumber"). value(0));
+                .andExpect(jsonPath("totalElements").value(1))
+                .andExpect(jsonPath("pageable.pageSize").value(100))
+                .andExpect(jsonPath("pageable.pageNumber").value(0));
 
     }
 
 
-
-
     private RegistrationDTO createNewRegistration() {
-        return  RegistrationDTO.builder().id(101).name("Ana Neri").dateOfRegistration("10/10/2021").registration("001").build();
+        return RegistrationDTO.builder().id(101).name("Ana Neri").dateOfRegistration("10/10/2021")
+                .build();
     }
 }

@@ -20,7 +20,4 @@ public class RegistrationDTO {
 
     @NotEmpty
     private String dateOfRegistration;
-
-    @NotEmpty
-    private String registration;
 }

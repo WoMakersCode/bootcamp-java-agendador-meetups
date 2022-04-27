@@ -19,10 +19,6 @@ public class RegistrationServiceImpl implements RegistrationService {
     }
 
     public Registration save(Registration registration) {
-        if (repository.existsByRegistration(registration.getRegistration())) {
-            throw new BusinessException("Registration already created");
-        }
-
         return repository.save(registration);
     }
 
@@ -61,10 +57,4 @@ public class RegistrationServiceImpl implements RegistrationService {
 
         return repository.findAll(example, pageRequest);
     }
-
-    @Override
-    public Optional<Registration> getRegistrationByRegistrationAttribute(String registrationAttribute) {
-        return repository.findByRegistration(registrationAttribute);
-    }
-
 }

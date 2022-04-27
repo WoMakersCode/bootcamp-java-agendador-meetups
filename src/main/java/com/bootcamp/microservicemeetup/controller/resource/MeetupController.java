@@ -7,17 +7,21 @@ import com.bootcamp.microservicemeetup.model.entity.Meetup;
 import com.bootcamp.microservicemeetup.model.entity.Registration;
 import com.bootcamp.microservicemeetup.service.MeetupService;
 import com.bootcamp.microservicemeetup.service.RegistrationService;
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/meetups")
@@ -28,14 +32,13 @@ public class MeetupController {
     private final RegistrationService registrationService;
     private final ModelMapper modelMapper;
 
-
-
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     private Integer create(@RequestBody MeetupDTO meetupDTO) {
 
-        Registration registration = registrationService.getRegistrationByRegistrationAttribute(meetupDTO.getRegistrationAttribute())
+        Registration registration = registrationService.getRegistrationById(meetupDTO.getRegistration().getId())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST));
+
         Meetup entity = Meetup.builder()
                 .registration(registration)
                 .event(meetupDTO.getEvent())
@@ -46,23 +49,23 @@ public class MeetupController {
         return entity.getId();
     }
 
-
     @GetMapping
     public Page<MeetupDTO> find(MeetupFilterDTO dto, Pageable pageRequest) {
         Page<Meetup> result = meetupService.find(dto, pageRequest);
+
         List<MeetupDTO> meetups = result
                 .getContent()
                 .stream()
                 .map(entity -> {
-
                     Registration registration = entity.getRegistration();
                     RegistrationDTO registrationDTO = modelMapper.map(registration, RegistrationDTO.class);
 
                     MeetupDTO meetupDTO = modelMapper.map(entity, MeetupDTO.class);
                     meetupDTO.setRegistration(registrationDTO);
-                    return meetupDTO;
 
+                    return meetupDTO;
                 }).collect(Collectors.toList());
+
         return new PageImpl<MeetupDTO>(meetups, pageRequest, result.getTotalElements());
     }
 }
