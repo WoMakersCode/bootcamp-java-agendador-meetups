@@ -31,10 +31,20 @@ https://github.com/ThamyrisGT/Bootcamp-Java-Agendador-Meetups
 
 https://github.com/mariliamessias/womakerscode-rest-api
 
+
+- **[Vanessa Alexsandra Yoshida de O. Murakami](https://www.linkedin.com/in/vanessayoshida/)**
+
+https://github.com/VanessaYoshida/bootcamp-java-star-wars
+
+https://github.com/VanessaYoshida/servico-agendamento-de-meetups
+
+
 - **[Sheila Neves](https://www.linkedin.com/in/sheila-neves-49b34852/)**
 
 https://github.com/sheila-serafim/WoMakersCodeMeetups
 
+
 - **[Bruna Delmouro da Silva](https://www.linkedin.com/in/bruna-delmouro/)**
 
 https://github.com/brunadelmourosilva/womakerscode-microservice-meetup
+

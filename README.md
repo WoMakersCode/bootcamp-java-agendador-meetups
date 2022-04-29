@@ -29,17 +29,6 @@ https://user-images.githubusercontent.com/42419543/162650128-1f8ab89f-0235-40a4-
 
 ## TODO ALUNAS - camada Meetup
 
-- [ ] Testes do repository 
+- [ ] Testes do repository
 - [ ] Testes do controller
 - [ ] Testes do service
-
-
-- **[Michely Prudêncio Souza](https://www.linkedin.com/in/michely-prudencio-souza/)**
-
-https://github.com/michelypsouza/bootcamp-java-starwars-restapi
-
-https://github.com/michelypsouza/Servico-de-agendamento-de-meetups
-
-
-
-
