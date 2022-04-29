@@ -39,6 +39,13 @@ https://github.com/leticiacamposs2/meeting-scheduling-microservice
 https://github.com/mariliamessias/womakerscode-rest-api
 
 
+- **[Mariela Atausinchi Fernandez](https://github.com/hikarym/)**
+
+https://github.com/hikarym/rest-api-startwars
+
+https://github.com/hikarym/Servico-de-agendamento-de-meetups
+
+
 - **[Lívia Pavini Zeviani](https://www.linkedin.com/in/livia-zeviani/)**
 
 https://github.com/liviazeviani/ProjetoTDDStarWars
