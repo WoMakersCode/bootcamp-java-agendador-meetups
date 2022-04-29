@@ -25,7 +25,7 @@ https://user-images.githubusercontent.com/42419543/162650128-1f8ab89f-0235-40a4-
 - [X] Implementação do repository
 - [X] Swagger
 - [X] Testes locais via postman
-- [ ] Deploy no azure
+- [X] Deploy no azure
 
 ## TODO ALUNAS - camada Meetup
 
