@@ -21,6 +21,13 @@ https://github.com/colinbruna/womakerscode-starwars-rest-api
 https://github.com/colinbruna/servico-de-agendamento-de-meetups
 
 
+- **[Joana Maria Nahorny](https://www.linkedin.com/in/joana-nahorny/)**
+
+https://github.com/JoanaNahorny/BootCamp-Star-Wars
+
+https://github.com/JoanaNahorny/MicroserviceMeetup
+
+
 - **[Esther Wyse Lucena](www.linkedin.com/in/esther-wyse-lucena)**
 
 https://github.com/estherwl/Rest-API_Star-Wars
