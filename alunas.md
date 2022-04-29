@@ -31,6 +31,10 @@ https://github.com/ThamyrisGT/Bootcamp-Java-Agendador-Meetups
 
 https://github.com/mariliamessias/womakerscode-rest-api
 
+- **[Sheila Neves](https://www.linkedin.com/in/sheila-neves-49b34852/)**
+
+https://github.com/sheila-serafim/WoMakersCodeMeetups
+
 - **[Bruna Delmouro da Silva](https://www.linkedin.com/in/bruna-delmouro/)**
 
 https://github.com/brunadelmourosilva/womakerscode-microservice-meetup
