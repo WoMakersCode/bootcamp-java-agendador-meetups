@@ -36,3 +36,30 @@ https://github.com/mariliamessias/womakerscode-rest-api
 https://github.com/liviazeviani/ProjetoTDDStarWars
 
 https://github.com/liviazeviani/MeetUp
+
+
+- **[Valéria Garcia](https://www.linkedin.com/in/valeriabeserragarcia/)**
+
+https://github.com/valeriabgarcia/WomakersCode-BootcampJava-API-Meetup
+
+
+- **[Vanessa Alexsandra Yoshida de O. Murakami](https://www.linkedin.com/in/vanessayoshida/)**
+
+https://github.com/VanessaYoshida/bootcamp-java-star-wars
+
+https://github.com/VanessaYoshida/servico-agendamento-de-meetups
+
+
+- **[Sheila Neves](https://www.linkedin.com/in/sheila-neves-49b34852/)**
+
+https://github.com/sheila-serafim/WoMakersCodeMeetups
+
+
+- **[Bruna Delmouro da Silva](https://www.linkedin.com/in/bruna-delmouro/)**
+
+https://github.com/brunadelmourosilva/womakerscode-microservice-meetup
+
+- **[Maisa Matos](https://www.linkedin.com/in/maisa-matos)**
+
+https://github.com/MaisaMatos/java-servico-agendamento-meetups.git
+

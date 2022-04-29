@@ -129,13 +129,13 @@ public class RegistrationControllerTest {
 
         Integer id = 11;
 
-        Registration student = Registration.builder()
+        Registration registration = Registration.builder()
                 .id(id)
                 .name(createNewRegistration().getName())
                 .dateOfRegistration(createNewRegistration().getDateOfRegistration())
                 .registration(createNewRegistration().getRegistration()).build();
 
-        BDDMockito.given(registrationService.getRegistrationById(id)).willReturn(Optional.of(student));
+        BDDMockito.given(registrationService.getRegistrationById(id)).willReturn(Optional.of(registration));
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get(REGISTRATION_API.concat("/" + id))
