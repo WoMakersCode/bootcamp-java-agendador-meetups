@@ -54,6 +54,13 @@ https://github.com/leticiacamposs2/meeting-scheduling-microservice
 https://github.com/mariliamessias/womakerscode-rest-api
 
 
+- **[Beatriz Maciel](https://www.linkedin.com/in/beatrizcbmaciel/)**
+
+https://github.com/beatrizmaciel/starwars-womakerscode
+
+https://github.com/beatrizmaciel/meetups
+
+
 - **[Letícia Ferreira Lima](https://www.linkedin.com/in/leticia-flima/)**
 
 https://github.com/Letiiciia/meetupsApi-WomakersCode
