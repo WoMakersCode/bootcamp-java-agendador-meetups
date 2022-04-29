@@ -6,6 +6,7 @@ https://github.com/amandaveredas/jedis-api
 
 https://github.com/amandaveredas/meetups-api
 
+
 - **[Aeviles Aguiar](https://www.linkedin.com/in/aeviles-aguiar-silva/)**
 
 https://github.com/aevilesaguiar/starWars.git
@@ -37,6 +38,13 @@ https://github.com/leticiacamposs2/meeting-scheduling-microservice
 - **[Marilia Aparecida Messias de Oliveira](https://www.linkedin.com/in/mariliamessias/)**
 
 https://github.com/mariliamessias/womakerscode-rest-api
+
+
+- **[Éslin Makicine Martins](https://www.linkedin.com/in/eslinmakicine/)**
+
+https://github.com/eslinmakicine/Bootcamp-Java-Star-Wars
+
+https://github.com/eslinmakicine/bootcamp-java-agendador-meetups
 
 
 - **[Mariela Atausinchi Fernandez](https://github.com/hikarym/)**
