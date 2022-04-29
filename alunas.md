@@ -48,3 +48,6 @@ https://github.com/sheila-serafim/WoMakersCodeMeetups
 
 https://github.com/brunadelmourosilva/womakerscode-microservice-meetup
 
+- **[Maisa Matos](https://www.linkedin.com/in/maisa-matos)**
+
+https://github.com/MaisaMatos/java-servico-agendamento-meetups.git
