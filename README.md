@@ -25,7 +25,7 @@ https://user-images.githubusercontent.com/42419543/162650128-1f8ab89f-0235-40a4-
 - [X] Implementação do repository
 - [X] Swagger
 - [X] Testes locais via postman
-- [ ] Deploy no azure
+- [X] Deploy no azure
 
 ## TODO ALUNAS - camada Meetup
 
@@ -34,7 +34,11 @@ https://user-images.githubusercontent.com/42419543/162650128-1f8ab89f-0235-40a4-
 - [ ] Testes do service
 
 
+- **[Michely Prudêncio Souza](https://www.linkedin.com/in/michely-prudencio-souza/)**
 
+https://github.com/michelypsouza/bootcamp-java-starwars-restapi
+
+https://github.com/michelypsouza/Servico-de-agendamento-de-meetups
 
 
 
