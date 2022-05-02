@@ -20,6 +20,10 @@ https://github.com/colinbruna/womakerscode-starwars-rest-api
 
 https://github.com/colinbruna/servico-de-agendamento-de-meetups
 
+- **[Caroline de Camargo Flach](https://www.linkedin.com/in/caroline-de-camargo-8030081a3/)**
+
+https://github.com/CarolineCamargo/bootcamp-womakerscode-API-meetup-schedule
+
 
 - **[Joana Maria Nahorny](https://www.linkedin.com/in/joana-nahorny/)**
 
