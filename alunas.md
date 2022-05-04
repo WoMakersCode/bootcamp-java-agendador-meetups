@@ -13,6 +13,8 @@ https://github.com/aevilesaguiar/starWars.git
 
 https://github.com/aevilesaguiar/Servico-de-agendamento-de-meetup
 
+https://github.com/aevilesaguiar/agenda-service-projeto
+
 
 - **[Bruna Colin Baldin e Silva](https://www.linkedin.com/in/bruna-colin-33955221a/)**
 
