@@ -44,16 +44,13 @@ public class RegistrationServiceTest {
     @DisplayName("Should save an registration")
     public void saveRegistration() {
 
-        // cenario
         Registration registration = createValidRegistration();
 
-        // excucao
         Mockito.when(repository.existsByRegistration(Mockito.anyString())).thenReturn(false);
         Mockito.when(repository.save(registration)).thenReturn(createValidRegistration());
 
         Registration savedRegistration = registrationService.save(registration);
 
-        // assert
         assertThat(savedRegistration.getId()).isEqualTo(101);
         assertThat(savedRegistration.getName()).isEqualTo("Ana Neri");
         assertThat(savedRegistration.getDateOfRegistration()).isEqualTo("01/04/2022");
@@ -81,14 +78,12 @@ public class RegistrationServiceTest {
     @DisplayName("Should get an Registration by Id")
     public void getByRegistrationIdTest() {
 
-        // cenario
         Integer id = 11;
         Registration registration = createValidRegistration();
         registration.setId(id);
         Mockito.when(repository.findById(id)).thenReturn(Optional.of(registration));
 
 
-        // execucao
         Optional<Registration> foundRegistration = registrationService.getRegistrationById(id);
 
         assertThat(foundRegistration.isPresent()).isTrue();
@@ -126,19 +121,15 @@ public class RegistrationServiceTest {
     @DisplayName("Should update an registration")
     public void updateRegistration() {
 
-        // cenario
         Integer id = 11;
         Registration updatingRegistration = Registration.builder().id(11).build();
 
-
-        // execucao
         Registration updatedRegistration = createValidRegistration();
         updatedRegistration.setId(id);
 
         Mockito.when(repository.save(updatingRegistration)).thenReturn(updatedRegistration);
         Registration registration = registrationService.update(updatingRegistration);
 
-        // assert
         assertThat(registration.getId()).isEqualTo(updatedRegistration.getId());
         assertThat(registration.getName()).isEqualTo(updatedRegistration.getName());
         assertThat(registration.getDateOfRegistration()).isEqualTo(updatedRegistration.getDateOfRegistration());
@@ -150,7 +141,6 @@ public class RegistrationServiceTest {
     @DisplayName("Should filter registrations must by properties")
     public void findRegistrationTest() {
 
-        // cenario
         Registration registration = createValidRegistration();
         PageRequest pageRequest = PageRequest.of(0,10);
 
@@ -158,13 +148,11 @@ public class RegistrationServiceTest {
         Page<Registration> page = new PageImpl<Registration>(Arrays.asList(registration),
                 PageRequest.of(0,10), 1);
 
-        // execucao
         Mockito.when(repository.findAll(Mockito.any(Example.class), Mockito.any(PageRequest.class)))
                 .thenReturn(page);
 
         Page<Registration> result = registrationService.find(registration, pageRequest);
 
-        // assercao
         assertThat(result.getTotalElements()).isEqualTo(1);
         assertThat(result.getContent()).isEqualTo(listRegistrations);
         assertThat(result.getPageable().getPageNumber()).isEqualTo(0);
